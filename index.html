@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="icon"
+      href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAALVBMVEXyUCJ/ugAApO//uQD////yTh/zVy2EvRYWp/D/uxbyTBvzXziJvyQkq/D/viRJQpTmAAABDUlEQVR4nO3PyRHCQBAEwRHo5vDfXD1ZC5oYyHKgIqtSLev8aZtixYCEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhIQdhUuq81vCNdZjED63WDX/eoT9I+wfYf8I+0fYv9pjvYbt+4hVt1j7IDzusQgJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQn/WXgB6/1wCkBWrdwAAAAASUVORK5CYII="
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Microsoft</title>
+  </head>
+  <body>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <h1>Microsoft</h1>
+    <center>
+      <img
+        src="data:image/png;base64,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"
+      />
+    </center>
+    <h3>Microsoft Corporation</h3>
+    <p>
+      Microsoft Corporation, leading developer of personal-computer software
+      systems and applications. The company also publishes books and multimedia
+      titles, produces its own line of hybrid tablet computers, offers e-mail
+      services, and sells electronic game systems and computer peripherals
+      (input/output devices). It has sales offices throughout the world. In
+      addition to its main research and development centre at its corporate
+      headquarters in Redmond, Washington, U.S., Microsoft operates research
+      labs in Cambridge, England (1997); Beijing, China (1998); Bengaluru, India
+      (2005); Cambridge, Massachusetts (2008); New York, New York (2012); and
+      Montreal, Canada (2015).
+    </p>
+    <br />
+    <hr />
+    <h3>Founding and early growth</h3>
+    <p>
+      In 1975 Bill Gates and Paul G. Allen, two boyhood friends from Seattle,
+      converted BASIC, a popular mainframe computer programming language, for
+      use on an early personal computer (PC), the Altair. Shortly afterward,
+      Gates and Allen founded Microsoft, deriving the name from the words
+      microcomputer and software. During the next few years, they refined BASIC
+      and developed other programming languages. In 1980 International Business
+      Machines Corporation (IBM) asked Microsoft to produce the essential
+      software, or operating system, for its first personal computer, the IBM
+      PC. Microsoft purchased an operating system from another company, modified
+      it, and renamed it MS-DOS (Microsoft Disk Operating System). MS-DOS was
+      released with the IBM PC in 1981. Thereafter, most manufacturers of
+      personal computers licensed MS-DOS as their operating system, generating
+      vast revenues for Microsoft; by the early 1990s it had sold more than 100
+      million copies of the program and defeated rival operating systems such as
+      CP/M, which it displaced in the early 1980s, and later IBM OS/2. Microsoft
+      deepened its position in operating systems with Windows, a graphical user
+      interface whose third version, released in 1990, gained a wide following.
+      By 1993, Windows 3.0 and its subsequent versions were selling at a rate of
+      one million copies per month, and nearly 90 percent of the world’s PCs ran
+      on a Microsoft operating system. In 1995 the company released Windows 95,
+      which for the first time fully integrated MS-DOS with Windows and
+      effectively matched in ease of use Apple Computer’s Mac OS. Microsoft also
+      became the leader in productivity software such as word-processing and
+      spreadsheet programs, outdistancing longtime rivals Lotus and WordPerfect
+      in the process. Microsoft dramatically expanded its electronic publishing
+      division, created in 1985 and already notable for the success of its
+      multimedia encyclopaedia, Encarta. It also entered the information
+      services and entertainment industries with a wide range of products and
+      services, most notably the Microsoft Network and MSNBC (a joint venture
+      with the National Broadcasting Company, a major American television
+      network, which began in 1995 and ended in 2012). As a result, by the
+      mid-1990s Microsoft, which became a publicly owned corporation in 1986,
+      had become one of the most powerful and profitable companies in American
+      history. It consistently earned profits of 25 cents on every sales dollar,
+      an astonishing record. In the company’s 1996 fiscal year, it topped $2
+      billion in net income for the first time, and its unbroken string of
+      profits continued, even during the Great Recession of 2007–09 (its net
+      income had grown to more than $14 billion by fiscal year 2009). However,
+      its rapid growth in a fiercely competitive and fast-changing industry
+      spawned resentment and jealousy among rivals, some of whom complained that
+      the company’s practices violated U.S. laws against unfair competition.
+      Microsoft and its defenders countered that, far from stifling competition
+      and technical innovation, its rise had encouraged both and that its
+      software had consistently become less expensive and more useful. A U.S.
+      Justice Department investigation concluded in 1994 with a settlement in
+      which Microsoft changed some sales practices that the government contended
+      enabled the company to unfairly discourage OS customers from trying
+      alternative programs. The following year the Justice Department
+      successfully challenged Microsoft’s proposed purchase of Intuit Inc., then
+      the leading maker of financial software for PCs.
+    </p>
+    <br />
+    <hr />
+    <h3>Chasing the Internet</h3>
+    <p>
+      Partly because of its stunning success in PC software, Microsoft was slow
+      to realize the commercial possibilities of network systems and the
+      Internet. In 1993 it released Windows NT, a landmark program that tied
+      disparate PCs together and offered improved reliability and network
+      security. Sales were initially disappointing, but by 1996 Windows NT was
+      being hailed as the likely standard for PC networking, quickly surpassing
+      Novell’s NetWare in market share. Microsoft did not move into Internet
+      software until a new venture, Netscape Communications Corp., had
+      introduced Navigator, a Web browser program that simplified the
+      once-arcane process of navigating the World Wide Web. In a violent change
+      of course, Microsoft quickly developed its own browser, Internet Explorer,
+      made it free, and moved aggressively to persuade computer makers and
+      Internet service providers to distribute it exclusively. By 1996 Microsoft
+      was bundling Explorer with Windows OS and had begun the process of
+      integrating Explorer directly into Windows. In response, Netscape accused
+      Microsoft of violating its 1995 consent decree and sued; those efforts
+      helped to persuade the Justice Department to reopen a broad investigation
+      of Microsoft. In 1999, following a trial that lasted 30 months, a judge
+      found Microsoft in violation of the Sherman Antitrust Act (1890) and
+      ordered the breakup of the company. In 2001 an appeals court overturned
+      the breakup order but still found the company guilty of illegally trying
+      to maintain a monopoly. The company’s legal woes continued in 2004: the
+      European Union (EU) levied the largest fine in the organization’s history
+      to that point, €497.2 million ($611 million), in retaliation for what were
+      described as Microsoft’s near-monopoly practices. In February 2008 the EU
+      imposed an even higher fine, €899 million ($1.35 billion), on the company
+      for having defied the EU’s 2004 antitrust decision against Microsoft for
+      illegally bundling multimedia software with its Windows operating system
+      to the exclusion of competitors.
+    </p>
+    <br />
+    <hr />
+    <h3>Entry into the gaming and mobile phone markets</h3>
+    <p>
+      In 2001 Microsoft released the Xbox, an electronic game console that
+      quickly captured second place in the video gaming market. In 2002 it
+      launched Xbox Live, a broadband gaming network for its consoles. A more
+      powerful gaming console, the Xbox 360, was released in 2005. In an
+      intensely competitive market, where the Xbox faced strong pressure from
+      the Nintendo Wii and Sony PlayStation, Microsoft struggled through the
+      years to make consistent profits from its console. For example, in 2009
+      the company cut the price of the Xbox 360 Elite by as much as 25 percent
+      in order to pick up market share. The move was successful; by 2010 the
+      Xbox 360 was the most-used game console in the American home. But at the
+      same time, the price cuts also led to a 6 percent drop in revenue in
+      Microsoft’s Entertainment and Devices Division (EDD). The Xbox 360 was
+      succeeded in 2013 by the Xbox One, which in turn was replaced by Xbox
+      Series X and Xbox Series S in 2020.Other EDD products also struggled. The
+      Zune family of portable media players introduced in 2006 failed to
+      challenge the market dominance of Apple’s iPod, and it was discontinued in
+      2011. The Windows Mobile OS, used in smartphones made by a variety of
+      vendors, including HTC, LG, Motorola, and Samsung, trailed in market share
+      in the United States behind Research in Motion’s BlackBerry and Apple’s
+      iPhone. In 2009 Microsoft ceased publishing online and disc versions of
+      its Encarta encyclopaedia.
+    </p>
+    <br />
+    <hr />
+    <h3>Further developments in Windows OS</h3>
+    <p>
+      Microsoft began planning a major replacement for all of its operating
+      systems in 2001. The project, code-named Longhorn, encountered numerous
+      delays, in part because of efforts to address the public’s growing concern
+      with computer security and consumers’ desire for PCs to have greater
+      integration with a full range of entertainment equipment within the modern
+      electronic home. The company started over, and the new operating system,
+      renamed Vista, was released to other software developers late in 2006 and
+      to the general public in 2007. Like most new operating systems, Vista met
+      with initial problems involving incompatibilities with older computer
+      peripherals. More problematic for the new operating system was its
+      “bloated” structure, which required a very fast microprocessor and large
+      amounts of dedicated computer memory for proper functioning. Its high
+      threshold for adequate system resources deterred many companies and
+      individuals from upgrading systems from earlier, and perfectly
+      serviceable, systems such as Windows XP (derived from the term Windows
+      Experience). In addition, consumers were baffled by the numerous Vista
+      options—Home (Basic or Premium), Ultimate, Business, and others—while
+      business users (Microsoft’s core market) balked at its major change to the
+      user interface and were unwilling to port their internal applications to
+      the new system. Microsoft’s corporate users had other reasons to stick
+      with Windows XP. Though still problematic compared with other operating
+      systems, XP was significantly more secure than its predecessors. XP was
+      also faster and much more stable than Windows 95 or 98, and it ran tens of
+      thousands of software programs written specifically for it, which made
+      business users reluctant to switch operating systems. It can be argued
+      that customer satisfaction with XP is what killed Vista among business
+      users. PC makers, who were contractually required by Microsoft to ship
+      products with Vista, were compelled to offer “downgrades” from Vista to
+      XP, and user appreciation even compelled Microsoft to extend its official
+      support of the older OS through 2014, three years beyond its normal
+      support policies. Adding to Microsoft’s OS problems was increased
+      competition in the marketplace. Apple’s Mac OS X, riding on the huge
+      success of the iPhone and iPod consumer products, grew in popularity.
+      Linux, long an operating system for the technically adept, began to appear
+      in more user-friendly versions, such as Ubuntu, and by the end of the
+      first decade of the 21st century, Linux had captured one-third of the
+      growing low-cost netbook market. Yet, despite its problems in the
+      marketplace, Microsoft remained the dominant supplier of operating
+      systems. Windows held a worldwide market share of 86 to 92 percent,
+      depending on the research analysis. With the release in 2009 of Windows 7,
+      the replacement for Vista, to critical praise by reviewers and analysts,
+      Microsoft’s lead remained intact. In 2012 the company released Windows 8,
+      which offered a start screen with applications appearing as tiles on a
+      grid. Windows 10, released in 2015, featured Cortana, a digital personal
+      assistant capable of responding to voice commands (as did the iPhone’s
+      Siri), and a new Web browser, Microsoft Edge, which replaced Internet
+      Explorer.
+    </p>
+    <br />
+    <hr />
+    <h3>Competition with Google</h3>
+    <p>
+      Microsoft’s continued OS dominance and its quick recovery in the “browser
+      wars” did not repeat itself in the search-engine market, where Microsoft’s
+      search engine, Live Search, trailed well behind those of Google Inc., the
+      new industry giant, and Yahoo! Inc., the durable Internet portal site.
+      Microsoft hoped to change the market dynamics with the release in 2009 of
+      Bing, a “decision engine” designed to display more retrieved information
+      in search pages than was typical, thus enabling better-informed decisions
+      concerning what links to follow or, in some cases, displaying enough
+      information to satisfy the original query. In 2008 Microsoft had offered
+      to buy Yahoo! for $44.6 billion, but this proposal was rejected by Yahoo!
+      However, negotiations between the companies continued, and in 2009 an
+      agreement was reached in which Yahoo! would use Bing for its Web site and
+      would handle premium advertisements for Microsoft’s Web site. The deal was
+      continued with some modifications (giving more flexibility to Yahoo!) in
+      2015. Microsoft followed up the agreement with Yahoo! by licensing search
+      content from Wolfram Research, makers of the Mathematica-powered
+      WolframAlpha scientific search engine. On another front in its competition
+      with Google, Microsoft moved into cloud computing, where application
+      software and data storage are provided by centralized Internet services
+      and are simply accessed by users through their local PCs. Microsoft’s
+      first move was with its Windows Azure (since 2014, Microsoft Azure)
+      platform, announced in 2008 and launched in 2010. Azure lets service
+      providers or businesses build computing infrastructure in the “cloud” and
+      then offer the infrastructure as services to users. In 2011 Microsoft
+      released Office 365, a cloud version of its highly profitable Office
+      business software suite (comprising Word, Excel, PowerPoint, Outlook, and
+      OneNote) that included services and features similar to those of Google
+      Docs. In 2011 Microsoft bought the Internet voice communication company
+      Skype for $8.5 billion, which at that time was the largest acquisition in
+      Microsoft’s history. Microsoft added Skype to Xbox, Outlook, and Windows
+      smartphones. The Skype acquisition placed Microsoft in competition with
+      Apple’s video-chat service FaceTime and Google’s Internet communication
+      service Voice. In 2016 Microsoft made an even larger acquisition with its
+      $26.2 billion purchase of the career-focused social networking company
+      LinkedIn.
+    </p>
+    <br />
+    <hr />
+    <h3>Microsoft after Bill Gates</h3>
+    <p>
+      In 2000 company cofounder Gates relinquished his role as CEO of Microsoft
+      to Steve Ballmer, whom Gates had met during his brief tenure at Harvard
+      University in the 1970s. He handed over the title of chief software
+      architect in 2006 to Ray Ozzie, a chief developer of the computer
+      networking package Lotus Notes in the 1990s. In 2008 Gates left the
+      day-to-day running of the company to Ballmer, Ozzie, and other managers,
+      though he remained as chairman of the board. Ozzie stepped down in 2010,
+      and longtime Microsoft executive Satya Nadella replaced Ballmer as CEO in
+      2014. There was some concern (and some hopefulness) among industry
+      observers that the departure of Gates would hamper Microsoft’s preeminent
+      position in the computer industry. That situation did not materialize. The
+      company retained its top spot in both business and consumer segments,
+      including operating systems, productivity software, and online gaming
+      services. In 2012 it introduced Surface, a line of hybrid tablet computers
+      with hardware designed by Microsoft itself, a first for the company. It
+      also had competitive products in almost all areas of business information
+      technology and applications. Microsoft’s core strengths and most of its
+      profits were to be found on its business side, where it set global
+      standards with its products. Nevertheless, Microsoft’s management
+      understood that the company also had to have a major, even if not a
+      dominant, presence in consumer markets as improvements in information
+      technology continued to blur the line between personal computing and
+      business computing. Encarta, in full Microsoft Encarta Multimedia
+      Encyclopedia, multimedia digital encyclopaedia produced by Microsoft
+      Corporation (1993–2009). Initially a CD-ROM product, the Encarta brand
+      later expanded to include an Internet-based incarnation and was bundled
+      with other Microsoft products. The possibility of a digital encyclopaedia
+      was first discussed at Microsoft in 1985. The company approached a range
+      of reference publishers before signing a nonexclusive contract with Funk &
+      Wagnalls to use their 29-volume New Encyclopedia in establishing a
+      database in 1989. The project, however, was put on hold in 1990 due to
+      concerns about the commercial viability of the product. After efforts
+      resumed in 1991, the company proceeded to illustrate the approximately
+      25,000 articles using an array of sound files and maps as well as more
+      than 5,000 public domain images and a small selection of videos.
+      Approximately 40 percent of the articles were biographies. Additional
+      features included a time line of human history, a dictionary and
+      thesaurus, and a quiz game called MindMaze. The encyclopaedia was later
+      offered in a range of foreign-language and regionally specific editions.
+      The initial CD product was released in March 1993 with a retail price of
+      nearly $400, equivalent to such competitors as Compton’s MultiMedia
+      Encyclopedia. Following slow sales, later that year the CD was given away
+      with the Windows software suite that was included with the purchase of
+      many computers, and the stand-alone price was dropped to $99. The price
+      reduction effectively catalyzed sales that outstripped competitors. Prices
+      continued to drop throughout the product’s life span. Abbreviated versions
+      of some Encarta articles were available to subscribers to the Microsoft
+      Network ISP, launched in 1995. Beginning in 1996, Encarta CDs were issued
+      in standard and deluxe editions. Users of the deluxe edition, which had
+      twice the multimedia content offered by the standard edition, could also
+      download monthly updates from Microsoft; users of the standard edition
+      could do so for a fee. Encarta was offered in a bundled reference suite
+      edition, which included a reference library and an interactive atlas,
+      beginning in 1997; it also remained available as a stand-alone product. In
+      1998 Microsoft purchased the copyrights to Collier’s electronic
+      encyclopaedia and the New Merit Scholar’s Encyclopedia and incorporated
+      that material into Encarta. In 1999 the company debuted the Encarta
+      Africana, an encyclopaedia of black history that was the result of a
+      collaboration with scholars, including Henry Louis Gates, Jr., and
+      published a print and digital dictionary, the Encarta World English
+      Dictionary, called the Encarta Webster’s Dictionary of the English
+      Language in subsequent editions. A subscription Web site debuted in 1998,
+      and an abridged version of Encarta was made available online for free in
+      2000, with full access available to purchasers of the CD or DVD products.
+      Microsoft began charging for access to all encyclopaedia content the
+      following year, though access to dictionary content remained free. In 2006
+      maintenance of Encarta content was turned over to Websters Multimedia
+      Inc., a subsidiary of Websters International Publishers Ltd. Citing the
+      advent of free online reference sources, Microsoft discontinued Encarta,
+      which then consisted of more than 60,000 articles, at the end of 2009.
+      Only the free Encarta dictionary remained online.
+    </p>
+    <br />
+    <hr />
+    <h3>operating system</h3>
+    <p>
+      operating system (OS), program that manages a computer’s resources,
+      especially the allocation of those resources among other programs. Typical
+      resources include the central processing unit (CPU), computer memory, file
+      storage, input/output (I/O) devices, and network connections. Management
+      tasks include scheduling resource use to avoid conflicts and interference
+      between programs. Unlike most programs, which complete a task and
+      terminate, an operating system runs indefinitely and terminates only when
+      the computer is turned off. Modern multiprocessing operating systems allow
+      many processes to be active, where each process is a “thread” of
+      computation being used to execute a program. One form of multiprocessing
+      is called time-sharing, which lets many users share computer access by
+      rapidly switching between them. Time-sharing must guard against
+      interference between users’ programs, and most systems use virtual memory,
+      in which the memory, or “address space,” used by a program may reside in
+      secondary memory (such as on a magnetic hard disk drive) when not in
+      immediate use, to be swapped back to occupy the faster main computer
+      memory on demand. This virtual memory both increases the address space
+      available to a program and helps to prevent programs from interfering with
+      each other, but it requires careful control by the operating system and a
+      set of allocation tables to keep track of memory use. Perhaps the most
+      delicate and critical task for a modern operating system is allocation of
+      the CPU; each process is allowed to use the CPU for a limited time, which
+      may be a fraction of a second, and then must give up control and become
+      suspended until its next turn. Switching between processes must itself use
+      the CPU while protecting all data of the processes. The first digital
+      computers had no operating systems. They ran one program at a time, which
+      had command of all system resources, and a human operator would provide
+      any special resources needed. The first operating systems were developed
+      in the mid-1950s. These were small “supervisor programs” that provided
+      basic I/O operations (such as controlling punch card readers and printers)
+      and kept accounts of CPU usage for billing. Supervisor programs also
+      provided multiprogramming capabilities to enable several programs to run
+      at once. This was particularly important so that these early
+      multimillion-dollar machines would not be idle during slow I/O operations.
+      Computers acquired more powerful operating systems in the 1960s with the
+      emergence of time-sharing, which required a system to manage multiple
+      users sharing CPU time and terminals. Two early time-sharing systems were
+      CTSS (Compatible Time Sharing System), developed at the Massachusetts
+      Institute of Technology, and the Dartmouth College Basic System, developed
+      at Dartmouth College. Other multiprogrammed systems included Atlas, at the
+      University of Manchester, England, and IBM’s OS/360, probably the most
+      complex software package of the 1960s. After 1972 the Multics system for
+      General Electric Co.’s GE 645 computer (and later for Honeywell Inc.’s
+      computers) became the most sophisticated system, with most of the
+      multiprogramming and time-sharing capabilities that later became standard.
+      The minicomputers of the 1970s had limited memory and required smaller
+      operating systems. The most important operating system of that period was
+      UNIX, developed by AT&T for large minicomputers as a simpler alternative
+      to Multics. It became widely used in the 1980s, in part because it was
+      free to universities and in part because it was designed with a set of
+      tools that were powerful in the hands of skilled programmers. More
+      recently, Linux, an open-source version of UNIX developed in part by a
+      group led by Finnish computer science student Linus Torvalds and in part
+      by a group led by American computer programmer Richard Stallman, has
+      become popular on personal computers as well as on larger computers. In
+      addition to such general-purpose systems, special-purpose operating
+      systems run on small computers that control assembly lines, aircraft, and
+      even home appliances. They are real-time systems, designed to provide
+      rapid response to sensors and to use their inputs to control machinery.
+      Operating systems have also been developed for mobile devices such as
+      smartphones and tablets. Apple Inc.’s iOS, which runs on iPhones and
+      iPads, and Google Inc.’s Android are two prominent mobile operating
+      systems. From the standpoint of a user or an application program, an
+      operating system provides services. Some of these are simple user commands
+      like “dir”—show the files on a disk—while others are low-level “system
+      calls” that a graphics program might use to display an image. In either
+      case the operating system provides appropriate access to its objects, the
+      tables of disk locations in one case and the routines to transfer data to
+      the screen in the other. Some of its routines, those that manage the CPU
+      and memory, are generally accessible only to other portions of the
+      operating system. Contemporary operating systems for personal computers
+      commonly provide a graphical user interface (GUI). The GUI may be an
+      intrinsic part of the system, as in the older versions of Apple’s Mac OS
+      and Microsoft Corporation’s Windows OS; in others it is a set of programs
+      that depend on an underlying system, as in the X Window system for UNIX
+      and Apple’s Mac OS X. Operating systems also provide network services and
+      file-sharing capabilities—even the ability to share resources between
+      systems of different types, such as Windows and UNIX. Such sharing has
+      become feasible through the introduction of network protocols
+      (communication rules) such as the Internet’s TCP/IP.
+    </p>
+    <br />
+    <hr />
+    <h2>Mobile telephone</h2>
+    <p>
+      Mobile telephone, also called mobile phone, portable device for connecting
+      to a telecommunications network in order to transmit and receive voice,
+      video, or other data. Mobile phones typically connect to the public
+      switched telephone network (PSTN) through one of two categories: cellular
+      telephone systems or global satellite-based telephony.
+    </p>
+    <br />
+    <hr />
+    <h3>Cellular telephones</h3>
+    <p>
+      Cellular telephones, or simply cell phones, are portable devices that may
+      be used in motor vehicles or by pedestrians. Communicating by radio waves,
+      they permit a significant degree of mobility within a defined serving
+      region that may range in area from a few city blocks to hundreds of square
+      kilometres. The first mobile and portable subscriber units for cellular
+      systems were large and heavy. With significant advances in component
+      technology, though, the weight and size of portable transceivers have been
+      significantly reduced. In this section, the concept of cell phones and the
+      development of cellular systems are discussed.
+    </p>
+    <br />
+    <hr />
+    <h3>Cellular communication</h3>
+    <p>
+      All cellular telephone systems exhibit several fundamental
+      characteristics, as summarized in the following:
+    </p>
+    <br />
+    <center>
+      <img
+        src="https://cdn.britannica.com/s:690x388,c:crop/32/24332-004-056FB3E3/telephone-system-location-Operation-cell-call-area.jpg"
+      />
+    </center>
+
+    <center>
+      <p style="font-size: small">
+        Operation of a cellular telephone systemFrom a specific location within
+        a geographic area,
+        <br />
+        or cell, a subscriber places a call using a mobile telephone. The call
+        is relayed by the base
+        <br />
+        station serving that cell to the mobile telephone switching office
+        (MTSO). The MTSO in turn
+        <br />
+        relays the call to another base station within the cellular system or to
+        a central office in
+        <br />
+        the public switched telephone network. When telephone traffic within a
+        cell exceeds capacity,
+        <br />
+        the cell is split into a number of smaller cells, each with its own base
+        station.
+      </p>
+    </center>
+    <br />
+    <hr />
+    <ol>
+      <li></li>
+    </ol>
+  </body>
+</html>
